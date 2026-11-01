@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>SkyCast | Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container">
+
+    <header class="header">
+        <div class="logo">☁️ SkyCast</div>
+        <h1>Weather Dashboard</h1>
+        <p>Check real-time weather anywhere in the world</p>
+    </header>
+
+    <form id="searchForm" class="search-box">
+        <input
+            type="text"
+            id="cityInput"
+            placeholder="Enter city name..."
+            value="Hyderabad"
+            aria-label="City name"
+            required
+        >
+        <button type="submit">🔍 Search</button>
+    </form>
+
+    <p id="message" role="status" aria-live="polite"></p>
+
+    <section id="weatherContent" hidden>
+
+        <div class="weather-main">
+            <div>
+                <p class="weather-label">CURRENT WEATHER</p>
+                <h2 id="cityName">--</h2>
+                <p id="dateTime">--</p>
+
+                <div class="temperature">
+                    <span id="weatherIcon">☀️</span>
+                    <span id="temperature">--</span>
+                    <span class="degree">°C</span>
+                </div>
+
+                <h3 id="description">--</h3>
+                <p id="feelsLike">Feels like --°C</p>
+            </div>
+
+            <div class="weather-art">🌤️</div>
+        </div>
+
+        <h2 class="section-title">Weather Details</h2>
+
+        <div class="details-grid">
+
+            <div class="detail-card">
+                <div class="detail-icon">💧</div>
+                <p>Humidity</p>
+                <h3 id="humidity">--%</h3>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-icon">💨</div>
+                <p>Wind Speed</p>
+                <h3 id="windSpeed">-- km/h</h3>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-icon">🌧️</div>
+                <p>Precipitation</p>
+                <h3 id="precipitation">-- mm</h3>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-icon">🌡️</div>
+                <p>Feels Like</p>
+                <h3 id="apparentTemp">--°C</h3>
+            </div>
+
+        </div>
+
+        <h2 class="section-title">5-Day Forecast</h2>
+        <div class="forecast-grid" id="forecastGrid"></div>
+
+    </section>
+
+    <footer>
+        <p>Made by Sirivalli Ravula | 2026</p>
+        <p>Weather data powered by Open-Meteo</p>
+    </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
